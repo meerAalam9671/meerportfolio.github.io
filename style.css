@@ -125,7 +125,14 @@ section {
 
 .info-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.email-box{
+    padding-left: 20px;
+}
+.contact-box{
+    padding-left: 20px;
 }
 
 .info-box span {
