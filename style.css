@@ -41,7 +41,9 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px 10%;
+    padding: 10px 10%;
+    position: fixed;
+    background: #250821;
 
 }
 
@@ -86,12 +88,14 @@ header {
 
 section {
     padding: 50px 10%;
-} 
-.home {  
+}
+
+.home {
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     align-items: center;
     grid-gap: 4em;
 }
@@ -127,6 +131,7 @@ section {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+
 }
 .email-box{
     padding-left: 20px;
@@ -224,7 +229,7 @@ section {
     max-height: 100%; 
 }
 .about{
-    background: var(--secon-bg-color);
+    background: var(--secon-bg-color); 
     height: 100%;
     width: 100%;
     display: grid;
@@ -288,7 +293,7 @@ section {
     width: 320px;
     height: 500px;
     border-radius: 5px;
-     margin-top: 30px;
+    margin-top: 30px;
 }
 .icon{
     display: flex; 
@@ -346,7 +351,8 @@ section {
 .btn:hover .hover{ 
     width: 135px;
 
-}
+} 
+
 
 
 @media only screen and (max-width: 600px) {
@@ -357,16 +363,58 @@ section {
     }
     .about{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         justify-content: center;
     }
+    .about-content{
+        text-align: center;
+    }
+    header #menu-icon{
+        display: block;
+    }
+    #menu-icon.bx-x{
+        transform: rotate(-180);
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -1000px;
+        right: 0; 
+        left: 0;
+        background: #250821;
+        text-align: right;
+        padding: 0px 30px;
+    }
+    .navlist li{
+        padding: 5px 10px; 
+    }
+    .navlist.open{
+        top: 100%;
+    }
+    .home-content h1 {
+        font-size: 30px;
+    
+    }
+    
+    .home-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .change-text h3 {
+        font-size: 20px;
+        display: inline;
+    }
+    
+    .change-text p {
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        color: rgb(155 152 152); 
+    }
 }
-
-
-
-
-
-
 
 
 
